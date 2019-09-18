@@ -12,9 +12,6 @@ log('gid',process.getgid());
 /*
  *    process.stdin.on('data',function(data){
  *        log(data);
- *           })
- *            
-
  *    })
  *    
  */
