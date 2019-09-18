@@ -1,2 +1,2 @@
 #!/usr/bin/node
-console.log('helloworld');
+console.log('hello world!');
