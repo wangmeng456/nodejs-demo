@@ -1,15 +1,15 @@
 #!/usr/bin/node
 
-const fs = require('fs');
-     // mod = process.argv[2],
-     // dst = process.argv[3];
+const fs = require('fs'),
+      mod = process.argv[2],
+      dst = process.argv[3];
 
 //fs.chmodSync(dst, Number(mod));
 
 try{
-  fs.chmodSync('../template.js', 0o764);
+  fs.chmodSync(dst, parseInt(mod, 8));
 }
 catch(err){
-  console.err(err.message);
+  console.error(err.message);
   process.exit(2);
 }
