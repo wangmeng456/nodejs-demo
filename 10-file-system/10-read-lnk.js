@@ -12,6 +12,6 @@ try{
   console.log('%s -> %s', lnk, fs.readlinkSync(lnk));
 }
 catch(e){
-  console.error(err.message);
+  console.error(e.message);
   process.exit(2);
 }

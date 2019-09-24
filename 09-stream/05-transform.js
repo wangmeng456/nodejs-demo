@@ -9,8 +9,8 @@ stdin.setEncoding('utf8');
 var tf = new Trans();
 
 tf._transform = function(chunk, encoding, callback) {
-    this.push(Buffer(chunk.toString('utf8').toUpperCase()));
-    callback();
+  this.push(Buffer(chunk.toString('utf8').toUpperCase()));
+  callback();
 
 };
 

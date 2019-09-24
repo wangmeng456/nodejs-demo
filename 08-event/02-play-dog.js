@@ -9,5 +9,5 @@ taidi.on('bark', onBark);
 zangao.on('bark', onBark);
 
 function onBark() {
-    console.log('%s barked! energy: %s', this.getName(), this.getEnergy());
+  console.log('%s barked! energy: %s', this.getName(), this.getEnergy());
 }

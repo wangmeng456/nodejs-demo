@@ -1,19 +1,20 @@
 #!/usr/bin/node
 
-function circle(radius) {
-  function area() {
-    return Math.PI *radius * radius;
+const pi = Math.PI;
+
+module.exports = (radius) => {
+  function circumference() {
+    return pi * 2 * radius;      
   }
 
-  function circumference() {
-    return 2 * Math.PI * radius; 
+  function area() {
+    return pi * radius * radius;      
   }
 
   return {
     area: area,
     circumference: circumference
-  }
-}
+  };
+};
 
 console.dir(module);
-module.exports = circle;
