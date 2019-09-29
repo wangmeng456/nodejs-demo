@@ -22,7 +22,7 @@ http.get(global.encodeURI(addr), function(res) {
     weather += data.toString('utf8');
   });
 
-  res.on('end', function(data) {
+  res.on('end', function() {
     weather = JSON.parse(weather);
     log(weather.result.today.temperature);
   });
