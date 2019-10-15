@@ -31,5 +31,5 @@ http.createServer((req, res) => {
 }).listen(8080);
 
 function getHTML(){
-  return '<!DOCTYPE html><html><head><title>Hello</title><head><body><h1>TODO List</h1><ul>'+items.map(function(it) {return '<li>' + it + '</li>';}).join('\n')+'</ul><form method="GET" action="/"><input type="text" name="item"><input type="submit" value="提交"></form></body></html>';
+  return '<!DOCTYPE html><html><head><title>Hello</title><head><body><h1>TODO List</h1><ul>'+items.map(function(item) {return '<li>' + item + '</li>';}).join('\n')+'</ul><form method="GET" action="/"><input type="text" name="item"><input type="submit" value="submit"></form></body></html>';
 }
