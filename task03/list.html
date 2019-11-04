@@ -212,6 +212,29 @@
 </body>
 <script src="https://code.jquery.com/jquery-3.1.1.min.js"></script>
 <script>
-   
+    function addChapter() {
+        window.location = "http://localhost:8083/addChapter"
+    }
+    $(document).ready(function(){
+        $.get("http://localhost:8083/message", (message)=>{
+            var message1 = JSON.parse(message);
+            for(var i=0;i<message1.length;i++){
+                var add=$('<tr></tr>');
+                var td1=$('<td></td>');
+                var td2=$('<td></td>');
+                var td3=$('<td></td>');
+                var td4=$('<td></td>');
+                td1.append(message1[i].chapterId);
+                td2.append(message1[i].chapterName);
+                td3.append(message1[i].views);
+                td4.append(message1[i].author);
+                td1.appendTo(add);
+                td2.appendTo(add);
+                td3.appendTo(add);
+                td4.appendTo(add);
+                $('#result').append(add);
+            }
+        })
+    })
 </script>
 </html>
