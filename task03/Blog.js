@@ -143,7 +143,7 @@ function add(req, res) {
       getMessage.chapterId = chapterList.length+1,
       getMessage.chapterName = message.title,
       getMessage.imgPath = message.imgPath,
-      getMessage.chapterDes = message.chapterDes,
+      getMessage.chapterDes = message.content,
       getMessage.chapterContent = message.content,
       getMessage.publishTimer = new Date().getTime(),
       getMessage.author = "admin",
